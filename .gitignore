@@ -7,8 +7,8 @@
 *.lock.hcl
 key.json
 plantf
-morsh_server_SSH
-morsh_server_SSH.pub
+morsh_*_SSH
+morsh_*_SSH.pub
 adm-user_SSH
 adm-user_SSH.pub
 yandex_cloud.ini

@@ -39,7 +39,7 @@ resource "yandex_compute_instance" "morsh_bastion" {
   network_interface {
     subnet_id          = var.vpc_subnet_id
     security_group_ids = []
-    nat                = true
+    nat                = var.nat_state
 
   }
 }

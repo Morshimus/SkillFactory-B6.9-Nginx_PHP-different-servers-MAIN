@@ -14,14 +14,14 @@ resource "yandex_vpc_subnet" "morsh-subnet-a" {
 }
 
 
-resource "yandex_vpc_subnet" "morsh-subnet-b" {
-  name           = var.subnet_b_name_yandex
-  description    = var.subnet_b_description_yandex
-  v4_cidr_blocks = var.subnet_b_v4_cidr_blocks_yandex
-  zone           = var.zone_yandex_b
-  network_id     = yandex_vpc_network.morsh-network.id
+#resource "yandex_vpc_subnet" "morsh-subnet-b" {
+#  name           = var.subnet_b_name_yandex
+#  description    = var.subnet_b_description_yandex
+#  v4_cidr_blocks = var.subnet_b_v4_cidr_blocks_yandex
+#  zone           = var.zone_yandex_b
+#  network_id     = yandex_vpc_network.morsh-network.id
 
-}
+#}
 
 
 module "morsh_instance_ya_1" {
@@ -30,6 +30,18 @@ module "morsh_instance_ya_1" {
   vpc_subnet_id        = yandex_vpc_subnet.morsh-subnet-a.id
   creation_zone_yandex = var.zone_yandex_a
   os_disk_size         = var.os_disk_size
+  prefix               = "front"
+}
+
+
+module "morsh_instance_ya_2" {
+  source               = "./INSTANCE"
+  source_image         = var.source_image
+  vpc_subnet_id        = yandex_vpc_subnet.morsh-subnet-a.id
+  creation_zone_yandex = var.zone_yandex_a
+  os_disk_size         = var.os_disk_size
+  prefix               = "back"
+  nat_state            = false
 }
 
 

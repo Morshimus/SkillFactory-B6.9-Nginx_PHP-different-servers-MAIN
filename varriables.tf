@@ -16,11 +16,11 @@ variable "zone_yandex_a" {
 }
 
 
-variable "zone_yandex_b" {
-  type        = string
-  default     = "ru-central1-a"
-  description = "Zone of 2nd instance in yandex cloud"
-}
+#variable "zone_yandex_b" {
+#  type        = string
+#  default     = "ru-central1-a"
+#  description = "Zone of 2nd instance in yandex cloud"
+#}
 
 variable "subnet_a_name_yandex" {
   type        = string
@@ -40,23 +40,23 @@ variable "subnet_a_description_yandex" {
   default = "Subnet A for morshimus instance A"
 }
 
-variable "subnet_b_name_yandex" {
-  type        = string
-  default     = "morsh-subnet-b"
-  description = "Subnet for 2nd instance"
-}
+#variable "subnet_b_name_yandex" {
+#  type        = string
+#  default     = "morsh-subnet-b"
+#  description = "Subnet for 2nd instance"
+#}
 
-variable "subnet_b_v4_cidr_blocks_yandex" {
-  type        = list(string)
-  default     = ["192.168.22.0/28"]
-  description = "IPv4 network for 2st instance subnet"
-}
+#variable "subnet_b_v4_cidr_blocks_yandex" {
+#  type        = list(string)
+#  default     = ["192.168.22.0/28"]
+# description = "IPv4 network for 2st instance subnet"
+#}
 
-variable "subnet_b_description_yandex" {
-  type    = string
-  default = "Subnet B for morshimus instance B"
+#variable "subnet_b_description_yandex" {
+#  type    = string
+#  default = "Subnet B for morshimus instance B"
 
-}
+#}
 
 
 variable "cloud_id_yandex" {

@@ -21,6 +21,7 @@
 | Name | Source | Version |
 |------|--------|---------|
 | <a name="module_morsh_instance_ya_1"></a> [morsh\_instance\_ya\_1](#module\_morsh\_instance\_ya\_1) | ./INSTANCE | n/a |
+| <a name="module_morsh_instance_ya_2"></a> [morsh\_instance\_ya\_2](#module\_morsh\_instance\_ya\_2) | ./INSTANCE | n/a |
 
 ## Resources
 
@@ -29,7 +30,6 @@
 | [local_file.yc_inventory](https://registry.terraform.io/providers/hashicorp/local/latest/docs/resources/file) | resource |
 | [yandex_vpc_network.morsh-network](https://registry.terraform.io/providers/yandex-cloud/yandex/latest/docs/resources/vpc_network) | resource |
 | [yandex_vpc_subnet.morsh-subnet-a](https://registry.terraform.io/providers/yandex-cloud/yandex/latest/docs/resources/vpc_subnet) | resource |
-| [yandex_vpc_subnet.morsh-subnet-b](https://registry.terraform.io/providers/yandex-cloud/yandex/latest/docs/resources/vpc_subnet) | resource |
 
 ## Inputs
 
@@ -44,18 +44,17 @@
 | <a name="input_subnet_a_description_yandex"></a> [subnet\_a\_description\_yandex](#input\_subnet\_a\_description\_yandex) | n/a | `string` | `"Subnet A for morshimus instance A"` | no |
 | <a name="input_subnet_a_name_yandex"></a> [subnet\_a\_name\_yandex](#input\_subnet\_a\_name\_yandex) | Subnet for 1st instance | `string` | `"morsh-subnet-a"` | no |
 | <a name="input_subnet_a_v4_cidr_blocks_yandex"></a> [subnet\_a\_v4\_cidr\_blocks\_yandex](#input\_subnet\_a\_v4\_cidr\_blocks\_yandex) | IPv4 network for 1st instance subnet | `list(string)` | <pre>[<br>  "192.168.21.0/28"<br>]</pre> | no |
-| <a name="input_subnet_b_description_yandex"></a> [subnet\_b\_description\_yandex](#input\_subnet\_b\_description\_yandex) | n/a | `string` | `"Subnet B for morshimus instance B"` | no |
-| <a name="input_subnet_b_name_yandex"></a> [subnet\_b\_name\_yandex](#input\_subnet\_b\_name\_yandex) | Subnet for 2nd instance | `string` | `"morsh-subnet-b"` | no |
-| <a name="input_subnet_b_v4_cidr_blocks_yandex"></a> [subnet\_b\_v4\_cidr\_blocks\_yandex](#input\_subnet\_b\_v4\_cidr\_blocks\_yandex) | IPv4 network for 2st instance subnet | `list(string)` | <pre>[<br>  "192.168.22.0/28"<br>]</pre> | no |
 | <a name="input_useros"></a> [useros](#input\_useros) | OS native default user | `string` | `"cloud-user"` | no |
 | <a name="input_zone_yandex_a"></a> [zone\_yandex\_a](#input\_zone\_yandex\_a) | Zone of 1st instance in yandex cloud | `string` | `"ru-central1-a"` | no |
-| <a name="input_zone_yandex_b"></a> [zone\_yandex\_b](#input\_zone\_yandex\_b) | Zone of 2nd instance in yandex cloud | `string` | `"ru-central1-a"` | no |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
 | <a name="output_external_ip_address_vm_1"></a> [external\_ip\_address\_vm\_1](#output\_external\_ip\_address\_vm\_1) | n/a |
+| <a name="output_external_ip_address_vm_2"></a> [external\_ip\_address\_vm\_2](#output\_external\_ip\_address\_vm\_2) | n/a |
 | <a name="output_hostname_vm_1"></a> [hostname\_vm\_1](#output\_hostname\_vm\_1) | n/a |
+| <a name="output_hostname_vm_2"></a> [hostname\_vm\_2](#output\_hostname\_vm\_2) | n/a |
 | <a name="output_internal_ip_address_vm_1"></a> [internal\_ip\_address\_vm\_1](#output\_internal\_ip\_address\_vm\_1) | n/a |
+| <a name="output_internal_ip_address_vm_2"></a> [internal\_ip\_address\_vm\_2](#output\_internal\_ip\_address\_vm\_2) | n/a |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->

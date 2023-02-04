@@ -71,3 +71,16 @@ variable "source_image" {
   type    = string
   default = "lamp"
 }
+
+variable "nat_state" {
+  type        = bool
+  default     = true
+  description = "Allow outside access to VM"
+}
+
+
+#variable "group" {
+#  type    = string
+#  default = "frontend"
+#  description = "Which group of host is it?"
+#}
