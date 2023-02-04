@@ -1,0 +1,40 @@
+---
+- hosts: nodes
+  gather_facts: yes
+  become: yes
+
+      
+  roles:
+    - role: common/dnsmasq
+      vars:
+        domain: "polar.grp"
+
+    - role: common/users_mgmt
+      vars:
+        admin_group: 'adm'
+        server_admin_list:
+         - name: "Server Administrator 2"
+           username: "user2"
+           keys:
+             active:
+               - "{{  user2_ssh_pub }}"
+             disabled:
+               - "{{  user2_ssh_pub_old }}"
+           shell: "/bin/bash"   
+           state: present
+         - name: "Server Administrator 3"
+           username: "user3"
+           keys:
+             active:
+               - "{{  user3_ssh_pub }}"
+             disabled:
+               - "{{  user3_ssh_pub_old }}"
+           shell: "/bin/bash"   
+           state: present   
+
+    - role: common/nginx_php
+      vars:
+        webroot: "/opt/nginx/ansible"
+        port: "8080"
+        server_name: "morsh_nginx"
+

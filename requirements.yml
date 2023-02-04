@@ -1,0 +1,4 @@
+---
+- src: https://github.com/Morshimus/SkillFactory-B6.9-Ansible-Nginx-Server-Roles.git
+  name: common
+  scm: git
