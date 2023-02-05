@@ -21,6 +21,7 @@ $${\color{lightgreen}Заданиие\space со \space звездочкой}$$
 
 ## Задание 5-6 :open_mouth:
  *PS - это было действительно сложно (не про задание, скорее про системы RedHat), учитывая что Selinux систем RedHat старается как можно более активно блокировать такие вещи, больше проблем было с ним, но это хороший опыт*
+ 
               ![](https://github.com/Morshimus/SkillFactory-B6.9-Nginx_PHP-different-servers-MAIN/blob/main/img/start.gif)
  
  * [x] - :one: ~~**Разделите tasks на роли:**~~
