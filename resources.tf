@@ -41,7 +41,6 @@ module "morsh_instance_ya_2" {
   creation_zone_yandex = var.zone_yandex_a
   os_disk_size         = var.os_disk_size
   prefix               = "back"
-  nat_state            = false
 }
 
 

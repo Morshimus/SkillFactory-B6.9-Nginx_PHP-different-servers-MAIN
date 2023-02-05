@@ -1,4 +1,7 @@
 ---
+- hosts: backend
+  gather_facts: yes
+
 - hosts: frontend
   gather_facts: yes
   become: yes     
@@ -11,9 +14,9 @@
            username: "serv-adm"
            keys:
              active:
-               - "{{  adm_ssh_pub }}"
-             disabled:
-               - "{{  user2_ssh_pub_old }}"
+               - "{{  adm_usr_pub }}"
+#             disabled:
+#               - "{{  adm_usr_pub_old }}"
            shell: "/bin/bash"   
            state: present
         users_group: 'users'
@@ -22,20 +25,20 @@
            username: "serv-usr"
            keys:
              active:
-               - "{{  serv-usr_ssh_pub }}"
-             disabled:
-               - "{{  serv-usr_ssh_pub_old }}"
+               - "{{  srv_usr_pub }}"
+#             disabled:
+#               - "{{  srv_usr_pub_old }}"
            shell: "/bin/bash"   
            state: present   
 
     - role: common/nginx
       vars:
-        webroot: "/opt/nginx/ansible"
+        webroot: "/srv/www/root"
+        php_fpm_server: "{{ hostvars[groups['backend'][0]]['ansible_eth0']['ipv4']['address'] }}:9000"
         port: "8080"
         server_name: "morsh_nginx"
 
 - hosts: backend
-  gather_facts: yes
   become: yes     
   roles:
     - role: common/users_mgmt
@@ -46,9 +49,9 @@
            username: "serv-adm"
            keys:
              active:
-               - "{{  adm_ssh_pub }}"
-             disabled:
-               - "{{  user2_ssh_pub_old }}"
+               - "{{  adm_usr_pub }}"
+#             disabled:
+#               - "{{  adm_usr_pub_old }}"
            shell: "/bin/bash"   
            state: present
         users_group: 'users'
@@ -57,10 +60,14 @@
            username: "serv-usr"
            keys:
              active:
-               - "{{  serv-usr_ssh_pub }}"
-             disabled:
-               - "{{  serv-usr_ssh_pub_old }}"
+               - "{{  srv_usr_pub }}"
+ #            disabled:
+ #              - "{{  srv_usr_pub_old }}"
            shell: "/bin/bash"   
            state: present   
 
     - role: common/php
+      vars:
+       port: "9000"
+       webroot: "/srv/www/root"
+       nginx_ip: "{{ hostvars[groups['frontend'][0]]['ansible_eth0']['ipv4']['address'] }}"

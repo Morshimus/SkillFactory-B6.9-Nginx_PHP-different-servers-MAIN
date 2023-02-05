@@ -97,7 +97,7 @@ function ansible {
         [Parameter(Mandatory=$False)]
         [String]$invFile = "./yandex_cloud.ini",
         [Parameter(Mandatory=$False)]
-        [String]$privateKey = "~/.ssh/morsh_bastion_SSH",
+        [String]$privateKey = "~/.ssh/morsh_server_SSH",
         [Parameter(Mandatory=$False,Position=0)]
         [String]$args
     )
