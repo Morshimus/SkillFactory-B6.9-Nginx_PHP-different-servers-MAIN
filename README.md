@@ -50,6 +50,16 @@ $${\color{lightgreen}Заданиие\space со \space звездочкой}$$
  ![image](https://db3pap003files.storage.live.com/y4mc27Z3t5dT1ySrmrOQ7iI2u8UU5ZemxaCcoTrpOacufMICzsxWocNslD4tk7JsAK3ghuyD7UrblcgYDJbjYwShbUCLwsHVQ3BMmnrmBM7hhojUhSTu7w4mb0j20Nfeu4sD6Ga8525Pt9uze4DldYXdTMEXjXjW8Xqwc-D4qKpWM9u-fZub4y4zLtL_x_aeWAt_guC11-RqKfY2-loCJKrjA/Ansible-Different-Servers-Nginx-PHP-console-4.jpg?psid=1&width=1240&height=485)
  
  
+ # And :dizzy_face: .....
+ 
+ > It's working
+ ![image](https://db3pap003files.storage.live.com/y4m6Ob529aAE80qPlz-UU2ZFJGt4cVnkrcamYJZw0ZOlaimHI6mZqbUucFZjkq2bhXskJ6DuiRRzqMaGqrgDPz3OUgLmwrYLxN425ttQktMUFE1HqSd6F7zFa1Vn8yhVoAaQKFDTVrD2C_1x1_dq2bPljCcL4v6XMx-_-ApAHDcuoi25Z2hMNv2bsa8cIrGEhZYiYgkRbzjOAONBmBxryp0iQ/php-backend.jpg?psid=1&width=1308&height=802)
+ 
+ ![](https://github.com/Morshimus/SkillFactory-B6.9-Nginx_PHP-different-servers-MAIN/blob/main/img/finish.gif)
+ 
+ > Ниже terraform-doc
+ 
+  
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
 
