@@ -28,9 +28,13 @@ $${\color{lightgreen}Заданиие\space со \space звездочкой}$$
       - ~~*«Поднимите nginx server», «Укажите в nginx отправлять php на 9000 порт» — роль «http».*~~
         - ~~*«Поднимите php-fpm», «Укажите php-fpm принимать на 9000 порт»— роль «php».*~~
    
-   > Написаны роли users_mgmt, php, nginx. Роли протестированы на молекуле. Для молекулы написаны тесты - test_port, test_nginx, test_php. Выгрузка успешных тустов ниже.
-   ![image]()
-   ![image]()
+   > Написаны роли users_mgmt, php, nginx. Роли протестированы на молекуле. Для молекулы написаны тесты - test_port, test_nginx, test_php. Выгрузка успешных тестов ниже.
+   
+   > Nginx - молекула тестирует открыт ли порт, так же тестирует пропускает ли nginx fastcgi (скачивая php-fpm по ключу molecule_yml и подбрасывая ему index.php)
+   ![image](https://db3pap003files.storage.live.com/y4mJrYMQ6EqEq54MVdjD1-Vzt1htgfrk-A3yNSoBl0aB5l_FC-CpsRoNj4yk2LhPaFu6H-izr7-V0hq5MYtiEWs8WRawNp4QVGmCW_BaQzssevrx58eYrT_jc489GGC4uM3c27YtHd0OEUr3z0VXJ0JHpVas2_HMWSiJ2jhk9k8LLSuNAjDI1B44WjQi3wwOr48f7wIGtEJoGTOqaMF5vHUZQ/Molecule-Nginx-Tests-1.jpg?psid=1&width=996&height=802)
+   ![image](https://db3pap003files.storage.live.com/y4mHu6bjaBFccLzPhmZgDJ8_TQrutFWHLKu1897jUqe2EONAKYV5TUqT0gCUXDBffV3fbaWZ0Q6vdKXnufAR7v87kjUetopgscVvvmE1c5sQ4Kygmo4qCuhMXLVqs3BIRmcHY8nUNWhnaCfwxZ-INfKEkuKha9MB-5wIxSRj8lx0DIepHca1o4-qc_yOi7aE-gM6MMro1q9Cts5qRbe0FjfJw/Molecule-Nginx-Verify-2.jpg?psid=1&width=1218&height=802)
+   
+   > Php - молекула тестирует открыт ли порт, и тестирует правильность конфигурации php-fpm -t.
    ![image]()
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
