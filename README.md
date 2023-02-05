@@ -1,4 +1,37 @@
-# lint
+# SkillFactory-B6.9-Nginx_PHP-different-servers-MAIN
+
+## Roles repository - https://github.com/Morshimus/SkillFactory-B6.9-Nginx_PHP-different-servers-Roles
+
+## Задание 1:
+* [x] - :one: ~~**Добавьте нового пользователя с авторизацией по ключу.**~~
+ > Сделано неоднократно, далее написана усложненная роль под добавления Админов и Обычных юзеров. :sunglasses:
+ 
+## Задание 2:
+* [x] - :one: ~~**Поднимите nginx server.**~~
+ > Reference link to project nginx_php https://github.com/Morshimus/SkillFactory-B6.9-Ansible-Nginx-Server-Main
+ 
+## Задание 3 - 4:
+* [x] - :one: ~~**Поднимите php-fpm на 9000 порту.**~~
+  > Создана отдельная роль php с темплейтами www.conf. Где указано слушать порт 9000 для всех адресов. Так же указан адрес fronend сервера в данном случае это локалхост.
+
+* [x] - :two: ~~**Укажите в nginx отправлять php на 9000 порт.**~~
+  > Вместо привычного fastcgi_pass на локальный сокет, подключим сокет TCP на переменную PHP-FPM-SERVER - создана роль nginx с подобной установкой. В данном примере сервер localhost - 127.0.0.1:9000
+  
+$${\color{lightgreen}Заданиие\space со \space звездочкой}$$    
+
+## Задание 5-6 :open_mouth:
+ *PS - это было действительно сложно (не про задание, скорее про системы RedHat), учитывая что Selinux систем RedHat старается как можно более активно блокировать такие вещи, больше проблем было с ним - но это хороший опыт*
+              ![](https://github.com/Morshimus/SkillFactory-B6.9-Nginx_PHP-different-servers-MAIN/blob/main/img/start.gif)
+ 
+ * [x] - :one: ~~**Разделите tasks на роли:**~~
+    - ~~*«Добавьте нового пользователя с авторизацией по ключу» — роль «users».*~~
+      - ~~*«Поднимите nginx server», «Укажите в nginx отправлять php на 9000 порт» — роль «http».*~~
+        - ~~*«Поднимите php-fpm», «Укажите php-fpm принимать на 9000 порт»— роль «php».*~~
+   
+   > Написаны роли users_mgmt, php, nginx. Роли протестированы на молекуле. Для молекулы написаны тесты - test_port, test_nginx, test_php. Выгрузка успешных тустов ниже.
+   ![image]()
+   ![image]()
+   ![image]()
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
